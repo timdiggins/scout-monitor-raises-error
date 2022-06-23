@@ -1,0 +1,18 @@
+common: &defaults
+  key: "doesnt-matter"
+  monitor: true
+  name: 'Scout demo - <%= Rails.env %>'
+
+production:
+  <<: *defaults
+
+development:
+  <<: *defaults
+  monitor: false
+
+test:
+  <<: *defaults
+  monitor: false # we need this true in order to surface issues
+
+staging:
+  <<: *defaults

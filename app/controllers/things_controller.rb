@@ -37,7 +37,7 @@ class ThingsController < ApplicationController
   # PATCH/PUT /things/1 or /things/1.json
   def update
     respond_to do |format|
-      if @thing.update(thing_params)
+      if Thing::NaughtyUpdater.new(@thing).update(thing_params)
         format.html { redirect_to thing_url(@thing), notice: "Thing was successfully updated." }
         format.json { render :show, status: :ok, location: @thing }
       else
