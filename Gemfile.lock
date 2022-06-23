@@ -47,6 +47,7 @@ GEM
     archive-zip (0.12.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
+    ast (2.4.2)
     bindex (0.8.1)
     bootsnap (1.12.0)
       msgpack (~> 1.2)
@@ -106,6 +107,8 @@ GEM
     nokogiri (1.13.6)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
+    parser (3.1.2.0)
+      ast (~> 2.4.1)
     public_suffix (4.0.7)
     puma (3.12.6)
     racc (1.6.0)
@@ -172,6 +175,8 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    scout_apm (5.2.0)
+      parser
     selenium-webdriver (4.1.0)
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
@@ -224,6 +229,7 @@ DEPENDENCIES
   rails (~> 5.2.8)
   rspec-rails
   sass-rails (~> 5.0)
+  scout_apm
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
